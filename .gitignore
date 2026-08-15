@@ -1,0 +1,16 @@
+# Excel temporary files
+~$*.xlsx
+~$*.xlsm
+
+# Backup files
+*.tmp
+*.bak
+
+# Windows files
+Thumbs.db
+
+# macOS files
+.DS_Store
+
+# Generated client reports
+output/weekly_reports/*
