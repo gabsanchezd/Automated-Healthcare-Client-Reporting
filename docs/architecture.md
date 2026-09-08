@@ -8,6 +8,48 @@ The main `README.md` is intentionally recruiter-focused and concise. This docume
 
 ---
 
+## Table of Contents
+
+- [Technical Architecture](#technical-architecture)
+  - [Table of Contents](#table-of-contents)
+  - [1. Architecture Overview](#1-architecture-overview)
+  - [2. Data Source Design](#2-data-source-design)
+  - [3. Power Query ETL](#3-power-query-etl)
+    - [Supporting Queries](#supporting-queries)
+  - [4. Status Standardization](#4-status-standardization)
+  - [5. Derived Reporting Fields](#5-derived-reporting-fields)
+    - [Financial Logic](#financial-logic)
+  - [6. Aging Logic](#6-aging-logic)
+  - [7. Data Quality Architecture](#7-data-quality-architecture)
+  - [8. Validation Layer](#8-validation-layer)
+  - [9. Reporting Layer](#9-reporting-layer)
+    - [Executive Summary](#executive-summary)
+    - [Client Summary](#client-summary)
+    - [Claim Detail](#claim-detail)
+  - [10. VBA Module Architecture](#10-vba-module-architecture)
+    - [`modRefresh`](#modrefresh)
+    - [`CQueryEvents`](#cqueryevents)
+    - [`modValidation`](#modvalidation)
+    - [`modReportGenerator`](#modreportgenerator)
+    - [`modLogging`](#modlogging)
+    - [`modUtilities`](#modutilities)
+  - [11. Report Generation Architecture](#11-report-generation-architecture)
+  - [12. Refresh Log Design](#12-refresh-log-design)
+  - [13. Error Handling Strategy](#13-error-handling-strategy)
+  - [14. Design Decisions](#14-design-decisions)
+    - [Excel as the Front End](#excel-as-the-front-end)
+    - [Power Query for ETL](#power-query-for-etl)
+    - [One Master Dataset](#one-master-dataset)
+    - [Modular VBA](#modular-vba)
+    - [Generated Outputs Excluded from Git](#generated-outputs-excluded-from-git)
+  - [15. Repository Source Code](#15-repository-source-code)
+  - [16. Current Limitations](#16-current-limitations)
+  - [17. Future Architecture Enhancements](#17-future-architecture-enhancements)
+  - [18. Summary](#18-summary)
+
+
+---
+
 ## 1. Architecture Overview
 
 The solution uses Excel as the reporting front end, Power Query as the ETL layer, and VBA as the workflow automation layer.
